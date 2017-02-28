@@ -18,9 +18,9 @@
 ;-------------------------------------------------------------------------------
 RESET       mov.w   #__STACK_END,SP         ; Initialize stackpointer
 StopWDT     mov.w   #WDTPW|WDTHOLD,WDTCTL  ; Stop watchdog timer
-mov.b #11h,R4
-mov.w #00AAh,R5
-and.w R4,R5
+			mov.b #11h,R4
+			mov.w #00AAh,R5
+			and.w R4,R5
 
 jmp$
 
