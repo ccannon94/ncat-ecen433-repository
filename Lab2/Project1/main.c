@@ -8,8 +8,8 @@ int a = 1;
 int main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 	
-	int b = 2;
-	int c;
+	volatile int b = 2;
+	volatile int c;
 	c = a+b;
 
 	while(1);
