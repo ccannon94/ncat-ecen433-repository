@@ -1,6 +1,6 @@
 #include <msp430.h> 
 
-unsigned long fib [100];
+float fib [100];
 
 /*
  * main.c
