@@ -8,7 +8,7 @@ int fib [100];
 void main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 	
-    int i;
+    volatile int i;
     fib[0] = 1;
     fib[1] = 1;
 
