@@ -10,7 +10,7 @@ void main(void) {
     volatile int mask = 0x0003;
     volatile int y = 0xFFFF;
 
-    while(a > 4)
+    while(a > 5)
     {
         a -= 1;
         y = (y^mask)&a;
