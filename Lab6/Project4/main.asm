@@ -51,7 +51,7 @@ Incr:
 			cmp.w #0214h,R5
 			jlo Loop2
 
-			jmp$
+			jmp $
 
 
                                             
