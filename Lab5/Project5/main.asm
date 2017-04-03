@@ -24,6 +24,43 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 ; Main loop here
 ;-------------------------------------------------------------------------------
 
+;if then
+			mov.w #0005h,R4
+			cmp.w #0004h,R4
+			jge Greater
+			dec R4
+			jmp done1
+Greater:
+			inc R4
+done1:
+
+;if then
+			mov.w #000Ah,R4
+			mov.w #0009h,R5
+			sub.w R4,R5
+			jn Less
+			dec R5
+			jmp done2
+Less:
+			inc R4
+done2:
+
+;for
+			mov.w #000Ah,R4
+Loop1:
+			dec R4
+			jne Loop1
+
+;while
+			mov.w #0006h,R4
+			mov.w #0002h,R5
+
+Loop2:
+			dec R4
+			cmp.w R5,R4
+			jge Loop2
+
+			jmp $
                                             
 
 ;-------------------------------------------------------------------------------
@@ -37,4 +74,5 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 ;-------------------------------------------------------------------------------
             .sect   ".reset"                ; MSP430 RESET Vector
             .short  RESET
+            .end
             
