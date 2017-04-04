@@ -24,30 +24,30 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 ; Main loop here
 ;-------------------------------------------------------------------------------
 
-;word level operations
-			mov.w #0000h,&0200h
-			mov.w #0002h,&0202h
-			mov.w #0004h,&0204h
-			mov.w #0006h,&0206h
-			mov.w #0200h,R5
+;Arithmetic Instructions
+			mov.w #0009h,R5
+			mov.w #0006h,R6
+			add.w R5,R6
+			mov.w #0006h,R6
+			dadd.w R5,R6
+			mov.w #0006h,R6
+			sub.w R5,R6
 
-			mov.w @R5+,R6
-			mov.w @R5+,R6
-			mov.w @R5+,R6
-			mov.w @R5+,R6
+;Logical and Register Control Instructions
+			mov.b #00001111b,R5
+			mov.b #00000011b,R6
+			and.b R5,R6
+			mov.b #00000011b,R6
+			xor.b R5,R6
+			rra.b R6
+			swpb R5
 
-;byte level operations
-			mov.b #00h,&0200h
-			mov.b #01h,&0201h
-			mov.b #02h,&0202h
-			mov.b #03h,&0203h
-			mov.w #0200h,R5
+;Data Instructions
+			mov.w #0006h,R5
+			mov.w #0009h,R6
+			cmp.w R5,R6
 
-			mov.b @R5+,R6
-			mov.b @R5+,R6
-			mov.b @R5+,R6
-			mov.b @R5+,R6
-
+;Jump Instructions
 			jmp $
                                             
 
