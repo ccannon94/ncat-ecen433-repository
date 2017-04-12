@@ -1,6 +1,6 @@
 #include <msp430.h> 
 
-#define LEB BIT0
+#define LED BIT0
 #define BUTTON BIT3
 
 /*
