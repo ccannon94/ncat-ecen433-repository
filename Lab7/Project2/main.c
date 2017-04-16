@@ -14,6 +14,7 @@ void main(void) {
 
 	while(1){
 	    if((P1IN & BUTTON) == 0x00){
+	        __delay_cycles(5000);
 	        if((P1IN & BUTTON) == 0x00){
 	            P1OUT ^=LED;
 	            while((P1IN & BUTTON) == 0x00);
