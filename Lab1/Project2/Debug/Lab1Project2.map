@@ -1,7 +1,7 @@
 ******************************************************************************
-                  MSP430 Linker PC v16.9.0                     
+                  MSP430 Linker PC v16.9.1                     
 ******************************************************************************
->> Linked Tue Feb 28 06:29:34 2017
+>> Linked Tue Mar 14 00:27:10 2017
 
 OUTPUT FILE NAME:   <Lab1Project2.out>
 ENTRY POINT SYMBOL: "RESET"  address: 0000c000
@@ -118,7 +118,7 @@ MODULE SUMMARY
     +--+--------------+------+---------+---------+
        Total:         20     2         0      
                                               
-    C:\ti\ccsv7\tools\compiler\ti-cgt-msp430_16.9.0.LTS\lib\rts430_eabi.lib
+    C:\ti\ccsv7\tools\compiler\ti-cgt-msp430_16.9.1.LTS\lib\rts430_eabi.lib
        isr_trap.obj   8      0         0      
        int00.obj      0      2         0      
        int02.obj      0      2         0      

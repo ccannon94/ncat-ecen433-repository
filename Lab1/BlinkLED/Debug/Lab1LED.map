@@ -1,7 +1,7 @@
 ******************************************************************************
-                  MSP430 Linker PC v16.9.0                     
+                  MSP430 Linker PC v16.9.1                     
 ******************************************************************************
->> Linked Tue Feb 28 06:38:21 2017
+>> Linked Tue Mar 14 00:22:02 2017
 
 OUTPUT FILE NAME:   <Lab1LED.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_noexit"  address: 0000c022
@@ -123,7 +123,7 @@ MODULE SUMMARY
     +--+------------------+------+---------+---------+
        Total:             34     0         0      
                                                   
-    C:\ti\ccsv7\tools\compiler\ti-cgt-msp430_16.9.0.LTS\lib\rts430_eabi.lib
+    C:\ti\ccsv7\tools\compiler\ti-cgt-msp430_16.9.1.LTS\lib\rts430_eabi.lib
        boot_special.obj   18     0         0      
        isr_trap.obj       8      0         0      
        exit.obj           6      0         0      
