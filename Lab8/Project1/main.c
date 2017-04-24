@@ -11,13 +11,21 @@ void main(void) {
 	//Set LED1 to off
 	P1OUT = 0x01;
 
-	while(1){
-	    if((P1IN && 0x08) == 0x00)
+	volatile int ledState = 1;
+
+	while(1)
+	{
+	    int counter = 0;
+
+	    P1OUT = 0x01;
+
+	    if(counter % 10 == 0)
 	    {
 	        P1OUT = 0x00;
-	    }else
-	    {
-
 	    }
+
+	    __delay_cycles(50000);
+
+	    counter++;
 	}
 }
